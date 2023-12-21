@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'Flora!';
+    src: local('Flora!');
+    src: url(../font/mr_FloraG.ttf);
+}
+
+body {
+    background-color: rgba(80, 141, 80, 0.71);
+    font-family: 'Cormorant Unicase', serif;
+}
+
+.container {
+    max-width: 930px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+/* =============================================== */
+
+
+.nav {
+    padding: 30px 0 36px 0;
+    border-bottom: 1px solid white;
+}
+
+.eco {
+    color: rgb(3, 123, 3);
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Flora!';
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.panel {
+    margin-left: auto;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    margin-right: 30px;
+    font-size: 20px;
+    color: #57471e;
+}
+
+.flex h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #57471e;
+    font-family: 'Flora!';
+    margin-right: 100px;
+}
+
+
+header {
+    margin-bottom: 20px;
+}
+
+/* ================================================= */
+
+.basketball {
+    color: azure;
+    font-size: 30px;
+}
+
+.text {
+    margin-bottom: 20px;
+    max-width: 900px;
+    width: 100%;
+}
+
+p {
+    width: 383px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.text-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+}
+
+.column {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+img {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.img-wrapper {
+    opacity: .8;
+}
+
+span {
+    font-size: 18px;
+}
+
+
+.flex-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+a:hover {
+    color: rgb(184, 251, 184);
+}
+
+.section-one {
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 30px;
+    height: 20px;
+    background-color: #57471e;
+    display: none;
+}
+
+@media (max-width:940px) {
+    .menu__btn {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        order: 1;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        transform: translate(85vw, 7vh);
+        z-index: 50;
+    }
+    .btn__line {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: rgb(3, 123, 3);
+        height: 2px;
+        transition: .3s ease;
+    }
+    .btn__line:nth-child(1) {
+        top: 0;
+    }
+    .btn__line:nth-child(2){
+        top:20px;
+    }
+    .btn__line:nth-child(3){
+        top: 20px;
+    }
+    .btn__line:nth-child(4){
+        top: 40px;
+    }
+    .menu-open .btn__line:nth-child(1){
+        transform: scaleX(0);
+    }
+    .menu-open .btn__line:nth-child(2){
+        transform: rotate(45deg);
+    }
+    .menu-open .btn__line:nth-child(3){
+        transform: rotate(-45deg);
+    }
+    .menu-open .btn__line:nth-child(4){
+        transform: scaleX(0);
+    }
+    .menu {
+        z-index: 40;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(80, 141, 80);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translateY(-100%);
+        transition: .3s ease;
+    }
+
+    .menu-open .menu {
+        transform: translateY(0);
+    }
+
+    ul {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .text-inner {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+    }
+
+    p {
+        width: 100%;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:550px) {
+    img {
+        width: 400px;
+        height: 300px;
+    }
+
+    .menu__btn {
+        transform: translate(80vw, 7vh);
+    }
+}
+
+@media (max-width:460px) {
+    .flex h1 {
+        font-size: 30px;
+    }
+
+    .eco {
+        font-size: 30px;
+    }
+
+    img {
+        width: 305px;
+        height: 200px;
+    }
+
+    .menu__btn {
+        transform: translate(78vw, 6vh);
+    }
+}
+
+@media (max-width:420px) {
+    .menu__btn {
+        transform: translate(77vw, 6vh);
+    }
+}
+
+@media (max-width: 375px) {
+    .menu__btn {
+        transform: translate(75vw, 6vh);
+    }
+}
+
+@media (max-width:360px) {
+    .flex-top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    p {
+        width: 300px;
+        font-size: 14px;
+    }
+
+    .menu__btn {
+        transform: translate(73vw, 6vh);
+    }
+
+    .basketball {
+        font-size: 24px;
+    }
+
+}
